@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3789840549321841072}
   - component: {fileID: 2722018396623243677}
   - component: {fileID: 2818306847453958383}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SM_Chest_Bot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2468310435182630712}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 6777139639017847538}
   - component: {fileID: 4248343334697882356}
   - component: {fileID: 2580216252915305635}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SM_Chest_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 3284873908451645807}
   - component: {fileID: 2927167352887369123}
   - component: {fileID: 5064734224942537654}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SM_Chest_Top_Part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4863588299083915501}
   - component: {fileID: 4626493101904950456}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Collider_Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8972872866355110495}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -387,7 +387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3133039694193516163}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: P_Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2701472245823717940}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SM_Chest_Hinge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ GameObject:
   - component: {fileID: 678325008017973445}
   - component: {fileID: 1554547634682322314}
   - component: {fileID: 1814513708972016562}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SM_Chest_Bot_Part
   m_TagString: Untagged
   m_Icon: {fileID: 0}

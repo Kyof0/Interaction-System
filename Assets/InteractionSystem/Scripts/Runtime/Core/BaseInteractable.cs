@@ -2,12 +2,16 @@ using UnityEngine;
 
 public abstract class BaseInteractable : MonoBehaviour, IInteractable
 {
+    protected string Interaction_UI_String = "";
     protected InteractionType interactionType;
-
+    protected bool canInteract = true;
     public virtual void Interact()
     {
     }
-
+    public virtual bool CanInteract()
+    {
+        return canInteract;
+    }
     protected virtual void Awake()
     {
 
@@ -27,5 +31,9 @@ public abstract class BaseInteractable : MonoBehaviour, IInteractable
     {
         Instant,
         Hold
+    }
+    public virtual string GetInteractText()
+    {
+        return Interaction_UI_String;
     }
 }
