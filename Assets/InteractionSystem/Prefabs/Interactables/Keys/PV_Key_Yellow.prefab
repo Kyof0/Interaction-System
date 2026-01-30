@@ -303,7 +303,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01016329b1aab8c4c9292a1963735c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: 2
+  m_IconPanel: {fileID: 0}
+  m_KeyColor: 2
 --- !u!1 &5397542290444894418
 GameObject:
   m_ObjectHideFlags: 0

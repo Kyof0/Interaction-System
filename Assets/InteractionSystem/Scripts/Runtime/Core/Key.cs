@@ -1,6 +1,7 @@
 using UnityEngine;
 public class Key : InstantInteractable
 {
+    [SerializeField] private GameObject m_IconPanel;
     private enum KeyColor
     {
         None,
@@ -19,6 +20,7 @@ public class Key : InstantInteractable
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInteract>().HasYellowKey = true;
         }
+        m_IconPanel.SetActive(true);
         Destroy(gameObject);
     }
 }
