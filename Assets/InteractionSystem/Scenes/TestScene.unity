@@ -129,7 +129,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1854423460051332104, guid: 8cefd7ea3c6fef848a73b06f18f9d459, type: 3}
       propertyPath: m_Name
-      value: P_Player 1
+      value: P_Player
       objectReference: {fileID: 0}
     - target: {fileID: 1854423460051332104, guid: 8cefd7ea3c6fef848a73b06f18f9d459, type: 3}
       propertyPath: m_TagString
@@ -196,7 +196,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2054878438}
     - target: {fileID: 5802544144706360284, guid: 8cefd7ea3c6fef848a73b06f18f9d459, type: 3}
+      propertyPath: m_interactTextPanel
+      value: 
+      objectReference: {fileID: 2054878438}
+    - target: {fileID: 5802544144706360284, guid: 8cefd7ea3c6fef848a73b06f18f9d459, type: 3}
       propertyPath: interactLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802544144706360284, guid: 8cefd7ea3c6fef848a73b06f18f9d459, type: 3}
+      propertyPath: m_interactLayer.m_Bits
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6741717348268801562, guid: 8cefd7ea3c6fef848a73b06f18f9d459, type: 3}
@@ -452,7 +460,7 @@ GameObject:
   - component: {fileID: 417588075}
   - component: {fileID: 417588074}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1077,8 +1085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782819f5e4465a74bb478e57d9f14f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Switch
-  target: {fileID: 1786420316}
+  m_target: {fileID: 1786420316}
 --- !u!1 &1755269660
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,6 +1593,10 @@ PrefabInstance:
       propertyPath: keyColor
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8716819270870344649, guid: 0a168850ac8032f4a9b968bd4578565a, type: 3}
+      propertyPath: m_KeyColor
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1602,6 +1613,10 @@ PrefabInstance:
     - target: {fileID: 2620313667379505523, guid: 9c2b519bd1dec2747bce9ab05ab47557, type: 3}
       propertyPath: _name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620313667379505523, guid: 9c2b519bd1dec2747bce9ab05ab47557, type: 3}
+      propertyPath: DoorColor
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4299873785502229745, guid: 9c2b519bd1dec2747bce9ab05ab47557, type: 3}
       propertyPath: m_Name
@@ -1663,6 +1678,10 @@ PrefabInstance:
     - target: {fileID: 1009361860465766611, guid: fe791fa009186be4a8a223a008363def, type: 3}
       propertyPath: _name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009361860465766611, guid: fe791fa009186be4a8a223a008363def, type: 3}
+      propertyPath: DoorColor
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1060642942648028821, guid: fe791fa009186be4a8a223a008363def, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1763,6 +1782,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4308044888268876684, guid: 24d5f5c7305397844a261b0410b64052, type: 3}
       propertyPath: keyColor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308044888268876684, guid: 24d5f5c7305397844a261b0410b64052, type: 3}
+      propertyPath: m_KeyColor
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5015464799818946468, guid: 24d5f5c7305397844a261b0410b64052, type: 3}

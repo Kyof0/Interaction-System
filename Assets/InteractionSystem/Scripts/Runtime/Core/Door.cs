@@ -1,66 +1,48 @@
 using System.Collections;
-using TMPro.EditorUtilities;
 using UnityEngine;
-
 public class Door : ToggleInteractable
 {
-    [Header("UI Tooltip")]
-    [SerializeField] private string _name = "Door";
-    private enum DoorColor
+    private enum DoorColorEnum
     {
         None,
         Red,
         Yellow
     }
-    [SerializeField] private DoorColor doorColor;
+    [SerializeField] private DoorColorEnum DoorColor = DoorColorEnum.None;
     [SerializeField] private float openTime = 2f;
-    private Quaternion closedRotation = Quaternion.Euler(0, 90, 0);
-    private Quaternion openRotation = Quaternion.Euler(0, 0, 0);
+    private readonly Quaternion m_ClosedRotation = Quaternion.Euler(0, 90, 0);
+    private readonly Quaternion m_OpenRotation = Quaternion.Euler(0, 0, 0);
     public override void Interact()
     {
-        if (!CanInteract())
+        if (!GetCanInteract())
         {
             return;
         }
         base.Interact();
         StartCoroutine(DoorAnimation());
     }
-    protected override void Awake()
+    public override bool GetCanInteract()
     {
-        base.Awake();
-        Interaction_UI_String = _name;
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    protected override void Start()
-    {
-    }
-
-    // Update is called once per frame
-    protected override void Update()
-    {
-    }
-    public override bool CanInteract()
-    {
-        if(doorColor == DoorColor.Red)
+        if(DoorColor == DoorColorEnum.Red)
         {
             GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
             if (playerGO.GetComponent<PlayerInteract>().HasRedKey == false) return false;
         }
-        else if (doorColor == DoorColor.Yellow)
+        else if (DoorColor == DoorColorEnum.Yellow)
         {
             GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
             if (playerGO.GetComponent<PlayerInteract>().HasYellowKey == false) return false;
         }
-        return base.CanInteract();
+        return base.GetCanInteract();
     }
     IEnumerator DoorAnimation()
     {
-        Quaternion rotation = openRotation;
-        if (isOpen)
+        Quaternion rotation = m_OpenRotation;
+        if (IsOpen)
         {
-            rotation = closedRotation;
+            rotation = m_ClosedRotation;
         }
-        canInteract = false;
+        CanInteract = false;
         float time = 0;
         while(time < 1)
         {
@@ -68,6 +50,6 @@ public class Door : ToggleInteractable
             time += Time.deltaTime * openTime;
             yield return null;
         }
-        canInteract = true;
+        CanInteract = true;
     }
 }

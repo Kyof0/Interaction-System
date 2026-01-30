@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 7051848309330325456}
   - component: {fileID: 3011657515643934811}
   m_Layer: 0
-  m_Name: P_Player 1
+  m_Name: P_Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -237,11 +237,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4db2fc176fedb45911a853089327c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 3029435591453235929}
-  interactDistance: 3
-  interactLayer:
+  HasRedKey: 0
+  HasYellowKey: 0
+  m_playerCamera: {fileID: 3029435591453235929}
+  m_interactDistance: 4
+  m_interactLayer:
     serializedVersion: 2
     m_Bits: 0
+  m_interactKey: 101
+  m_interactTextPanel: {fileID: 0}
 --- !u!114 &7051848309330325456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,9 +258,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76be15df4251b9d4cb4370aedcf33860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  mouseSensitivity: 150
-  cameraTransform: {fileID: 6741717348268801562}
+  m_moveSpeed: 5
+  m_mouseSensitivity: 150
+  m_cameraTransform: {fileID: 6741717348268801562}
 --- !u!143 &3011657515643934811
 CharacterController:
   m_ObjectHideFlags: 0

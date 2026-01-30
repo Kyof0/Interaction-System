@@ -1,48 +1,33 @@
 using UnityEngine;
-
 public class Switch : ToggleInteractable
 {
-    [Header("UI Tooltip")]
-    [SerializeField] private string _name = "Switch";
-    [SerializeField] BaseInteractable target;
+    [SerializeField] private BaseInteractable m_target;
+    private const int k_StickAngle = 8;
+    private readonly Quaternion m_Stick_Open_Angle = Quaternion.Euler(k_StickAngle, 0,0);
+    private readonly Quaternion m_Stick_Close_Angle = Quaternion.Euler(-k_StickAngle, 0, 0);
     public override void Interact()
     {
-        if (target == null || !target.CanInteract())
+        if (m_target == null || !m_target.GetCanInteract())
         {
             Debug.LogWarning("Switch cannot interact");
             return;
         }
         base.Interact();
-        target.Interact();
+        m_target.Interact();
         SwitchAnimation();
-    }
-    protected override void Awake()
-    {
-
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    protected override void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    protected override void Update()
-    {
-
     }
     void SwitchAnimation()
     {
         Transform stick = transform.Find("SM_Stick");
-        if (isOpen)
+        if (IsOpen)
         {
             stick.GetComponent<MeshRenderer>().material.color = Color.green;
-            stick.rotation = Quaternion.Euler(8, 0, 0);
+            stick.rotation = m_Stick_Open_Angle;
         }
         else
         {
             stick.GetComponent<MeshRenderer>().material.color = Color.red;
-            stick.rotation = Quaternion.Euler(-8, 0, 0);
+            stick.rotation = m_Stick_Close_Angle;
         }
     }
 }

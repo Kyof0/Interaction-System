@@ -1,11 +1,9 @@
-using UnityEngine;
-
 public class ToggleInteractable : InstantInteractable
 {
-    protected bool isOpen = false;
+    protected bool IsOpen = false;
     public override void Interact()
     {
         base.Interact();
-        isOpen = !isOpen;
+        IsOpen = !IsOpen;
     }
 }
